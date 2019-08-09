@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <title>This is a video.</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <div class="media">
+                <img src="..." class="mr-3" alt="...">
+                <div class="media-body">
+                  <h5 class="mt-0">Random Media heading(yes im sadistic)</h5>
+                  <p>HoH SiS JoJ SuS WaW SoS JeJ. Inspired by cs188's self-ytps</p>
+                  <p>This site is POORLY MADE</p>
+                </div>
+              </div>
+    </Head>  
+    
+       
+       <style>
+@keyframes fadeInLeft { from { opacity:0; -webkit-transform: translatex(-100px); -moz-transform: translatex(-100px); -o-transform: translatex(-100px); transform: translatex(-100px); } to { opacity:1; -webkit-transform: translatex(0); -moz-transform: translatex(0); -o-transform: translatex(0); transform: translatex(0); } } 
+.tab { animation-name: fadeInLeft; animation-fill-mode: both; animation-duration: 1s; animation-delay: 1s; }
+
+
+       h1{
+           color: white;
+           font-family: cursive
+       } 
+       body{
+           background-image: url("engie.jpg")
+       }
+       p{
+           color:white;
+         font-family: 'Courier New', Courier, monospace;
+         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+         font-family: cursive
+        }
+        a{
+            color:  greenyellow;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+         }
+         h2{
+           color:   magenta
+         }
+         input{
+           color:  blueviolet
+         }   
+       </style>
+       <p>NOPE.AVI</p>
+
+       <body> 
+                <a href =  "https://www.youtube.com/watch?v=WcojAI0YRYw"> Click here to order the Galaxy FooF 53.4 </a>  
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rFiXbOwamLI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <img src = "download.jpg"> 
+                <p> This is a hilarious YTP made by cs188.</p>
+                <p>"Behind The Meme" is ruining the meme economy.</p>
+                <a href = "https://www.google.com/search?q=r/dankmemes&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiK1ufJ-dnjAhVJWBoKHfAEDLwQ_AUIESgB&biw=1494&bih=969#imgrc=_">REEEEEEEEEEEEEEEE </a>
+                <img src = "shpee.png"> 
+
+                <a href="https://www.reddit.com/r/dankmemes/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">For more cringe</a>
+
+          <a href="https://www.youtube.com/watch?v=rFiXbOwamLI">Dua Lipa Feels like nobody. LITTERALY.</a>
+              
+
+
+              <p> Why are you still here? Go by our website to make fun of everyone!</p>
+              <a href="https://theuselessweb.com" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Click here to watch some hilarious pages or else watch some normie trash</a>
+          <a href="https://www.youtube.com/watch?v=0ZizvUJia5U">Mae By IPSOUM</a>
+          <a href="https://www.youtube.com/channel/UCYBP_TtboAYP28U3ZVNM9Ig">Because we're tighter than bark on a tree</a>
+
+
+          <a href="https://www.reddit.com/r/lebanon/" class="btn-primary btn-lg active" role="link" aria-pressed="false">For the people, by the people.</a>
+
+
+         <a href="https://www.youtube.com/watch?v=Xp5BpjyKgaQ&list=PL6NEi10_WZWGUUif6QxdQQeSMZTlu8ybi&index=1" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">surreal memes</a>
+
+         <h2>My To-Do's: Add random information for zero sense</h2>
+         <input type = "text" id = "input">
+         <button id = "addBtn">Add</button>
+         <div id = "content"> </div>
+         
+         
+         <h1>My To-Do's</h1>
+         <input type = "text" id = "input">
+         <button id = "addBtn">Add</button>
+         <div id = "content"> </div>
+         <script>
+          document.getElementById('content').innerHTML = localStorage.getItem('myList')   
+          document.getElementById('addBtn').addEventListener('click', function(){
+             var a = document.createElement('li')
+            
+            var c = document.createElement('input')
+            c.setAttribute('type', 'checkbox')
+            c.addEventListener('change', checkItem)
+            a.append(c)
+ 
+             a.append(document.getElementById('input').value)
+             
+             var b = document.createElement('button')
+             b.addEventListener('click', removeItem)
+             b.innerHTML = "X"
+             a.append(b)
+             
+             document.getElementById('content').append(a)
+             localStorage.setItem('myList', document.getElementById('content').innerHTML)
+          })
+          function removeItem(){
+              this.parentNode.remove()
+          }
+          function checkItem(){
+           this.parentNode.classList.toggle('checked')
+          }          
+         </script>§
+
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+<div class="tab">
+    <form method="get" action="https://www.youtube.com/channel/UCzzwBR-gfkfJFn57nS-x4EA">
+  <button class="tablinks" onclick="openCity(event, 'https: //www.youtube.com/channel/UCzzwBR-gfkfJFn57nS-x4EA')">IPSUM</button></form>
+  <form method="get" action="https://www.youtube.com/channel/UCCSaQLMqanFT1GkHANX9w2w">
+    <button class="tablinks1" onclick="openCity(event, 'https: //www.youtube.com/channel/UCCSaQLMqanFT1GkHANX9w2w')">cs188</button></form>
+  <form method="get" action="https://www.youtube.com/channel/UCYBP_TtboAYP28U3ZVNM9Ig">
+    <button class="tablinks2" onclick="openCity(event, 'https: //www.youtube.com/channel/UCYBP_TtboAYP28U3ZVNM9Ig')">Pamtri</button></form>
+    <form method="get" action="https://www.youtube.com/channel/UCChWvNbRQYQ5fj1Nj3RQu8Q">
+      <button class="tablinks2" onclick="openCity(event, 'https: //www.youtube.com/channel/UCChWvNbRQYQ5fj1Nj3RQu8Q')">surreal entertainment</button></form>
+      <form method="get" action="https://www.youtube.com/channel/UCQDpTrREsvVFT9W9ol4AqcA">
+        <button class="tablinks2" onclick="openCity(event, 'https: //www.youtube.com/channel/UCQDpTrREsvVFT9W9ol4AqcA')">TheSos</button></form>
+        <form method="get" action="https://www.youtube.com/channel/UCT4ai0kMMHXqIy9HP8WYEeQ">
+          <button class="tablinks2" onclick="openCity(event, 'https: //www.youtube.com/channel/UCT4ai0kMMHXqIy9HP8WYEeQ')">p00petmasters</button></form>
+      </div>
+
+<a href="https://open.spotify.com/playlist/0NCspsyf0OS4BsPgGhkQXM">Trap Nation's Spotify list</a>
+
+
+
+
+
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/qo6ygYSxwEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/W3GrSMYbkBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1xs_FXXfaoU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/KuBLPX5a-3g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Jj4jHrTVgRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/LDU_Txk06tM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5hEh9LiSzow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XsgnkLmwFm8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+  
+  
+
+
+  </body>
+
+
+</html>
